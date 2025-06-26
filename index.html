@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keerthi Anil - Full Stack Developer & Cloud Analyst Portfolio">
+    <meta name="keywords" content="Keerthi Anil, Full Stack Developer, Cloud Analyst, iOS Developer, Web Developer">
+    <meta name="author" content="Keerthi Anil">
+    <title>Keerthi Anil - Netflix Style Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <h1 class="loading-text">KA</h1>
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="logo">KA</a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <a href="mailto:anil.ke@northeastern.edu" class="contact-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact Me</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-up">KEERTHI ANIL</h1>
+            <p class="hero-subtitle animate-fade-up delay-1">Software Engineer | Cloud Enthusiast | Mobile App Developer</p>
+            <p class="hero-description animate-fade-up delay-2">
+                Master's student at Northeastern University crafting innovative digital experiences
+            </p>
+            <div class="hero-buttons animate-fade-up delay-3">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-play"></i>
+                    View Projects
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Featured Project with Parallax -->
+    <section class="featured-section" id="featured">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Featured Project</h2>
+            <div class="featured-project">
+                <div class="featured-content scroll-reveal-left">
+                    <span class="featured-tag">NEW</span>
+                    <h3 class="featured-title">Swaptitude</h3>
+                    <p class="featured-description">
+                        A comprehensive skill-exchange iOS application built with SwiftUI and Firebase. 
+                        Features real-time messaging, custom matching algorithms, video integration for virtual sessions, 
+                        and a built-in AI assistant. Architected using MVVM design pattern with Combine framework.
+                    </p>
+                    <div class="featured-tech">
+                        <span class="tech-badge">SwiftUI</span>
+                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">MVVM</span>
+                        <span class="tech-badge">Combine</span>
+                    </div>
+                    <div class="featured-buttons">
+                        <button class="btn btn-primary modal-trigger" data-project="swaptitude">
+                            <i class="fas fa-info-circle"></i>
+                            More Info
+                        </button>
+                        <a href="https://github.com/keerthianil" class="btn btn-secondary">
+                            <i class="fab fa-github"></i>
+                            View Code
+                        </a>
+                    </div>
+                </div>
+                <div class="featured-image scroll-reveal-right">
+                    <img src="images/swaptitude-featured.png" alt="Swaptitude App Featured" onerror="this.src='https://via.placeholder.com/600x400/1a1a1a/e50914?text=Swaptitude+Featured'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">My Projects</h2>
+            
+            <!-- Projects Slider -->
+            <div class="project-slider">
+                <button class="slider-btn prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="project-cards">
+                    <!-- Swaptitude - Mobile -->
+                    <div class="project-card modal-trigger scroll-reveal" data-project="swaptitude">
+                        <div class="card-category">Mobile Development</div>
+                        <div class="card-image">
+                            <img src="images/swaptitude-card.png" alt="Swaptitude Mobile" onerror="this.src='https://via.placeholder.com/300x170/1a1a1a/e50914?text=Swaptitude'">
+                        </div>
+                        <div class="card-content">
+                            <h4>Swaptitude iOS</h4>
+                            <p>Skill-exchange iOS application</p>
+                            <div class="card-tech">
+                                <span>SwiftUI</span>
+                                <span>Firebase</span>
+                                <span>iOS</span>
+                            </div>
+                            <div class="card-hover-text">
+                                <i class="fas fa-mouse-pointer"></i> Click for details
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TravelPlanner - Mobile -->
+                    <div class="project-card modal-trigger scroll-reveal" data-project="travelplanner">
+                        <div class="card-category">Mobile Development</div>
+                        <div class="card-image">
+                            <img src="images/travelplanner-card.png" alt="TravelPlanner App" onerror="this.src='https://via.placeholder.com/300x170/1a1a1a/e50914?text=TravelPlanner'">
+                        </div>
+                        <div class="card-content">
+                            <h4>TravelPlanner iOS</h4>
+                            <p>Travel organization & planning app</p>
+                            <div class="card-tech">
+                                <span>Swift</span>
+                                <span>UIKit</span>
+                                <span>Core Data</span>
+                            </div>
+                            <div class="card-hover-text">
+                                <i class="fas fa-mouse-pointer"></i> Click for details
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accident Detection - Cloud -->
+                    <div class="project-card modal-trigger scroll-reveal" data-project="accident-detection">
+                        <div class="card-category">Cloud & AI</div>
+                        <div class="card-image">
+                            <img src="images/accident-detection-card.png" alt="Accident Detection" onerror="this.src='https://via.placeholder.com/300x170/1a1a1a/e50914?text=Accident+Detection'">
+                        </div>
+                        <div class="card-content">
+                            <h4>Accident Detection System</h4>
+                            <p>AI-powered emergency response</p>
+                            <div class="card-tech">
+                                <span>Python</span>
+                                <span>CNN</span>
+                                <span>Cloud</span>
+                            </div>
+                            <div class="card-hover-text">
+                                <i class="fas fa-mouse-pointer"></i> Click for details
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Food Ordering - Web -->
+                    <div class="project-card modal-trigger scroll-reveal" data-project="food-ordering">
+                        <div class="card-category">Web Development</div>
+                        <div class="card-image">
+                            <img src="images/food-ordering-card.png" alt="Food Ordering Platform" onerror="this.src='https://via.placeholder.com/300x170/1a1a1a/e50914?text=Food+Ordering'">
+                        </div>
+                        <div class="card-content">
+                            <h4>Food Ordering Platform</h4>
+                            <p>Responsive food ordering system</p>
+                            <div class="card-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="card-hover-text">
+                                <i class="fas fa-mouse-pointer"></i> Click for details
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio - Web -->
+                    <div class="project-card modal-trigger scroll-reveal" data-project="portfolio">
+                        <div class="card-category">Web Development</div>
+                        <div class="card-image">
+                            <img src="images/portfolio-card.png" alt="Portfolio Website" onerror="this.src='https://via.placeholder.com/300x170/1a1a1a/e50914?text=Portfolio'">
+                        </div>
+                        <div class="card-content">
+                            <h4>Netflix Portfolio</h4>
+                            <p>This portfolio website</p>
+                            <div class="card-tech">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="card-hover-text">
+                                <i class="fas fa-mouse-pointer"></i> Click for details
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="experience-section" id="experience">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Professional Journey</h2>
+            <p class="section-subtitle scroll-reveal">Click on any experience for more details</p>
+            
+            <div class="timeline-wrapper">
+                <div class="timeline">
+                    <div class="timeline-item scroll-reveal" data-experience="capgemini">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date-banner">Jun 2023 - Aug 2024</div>
+                            <div class="timeline-body">
+                                <h3>Cloud Analyst</h3>
+                                <h4>Capgemini</h4>
+                                <p>Streamlined client workflows with Azure services, achieving 15% efficiency increase. 
+                                   Architected containerized solutions using Docker and optimized ECM workflows.</p>
+                                <div class="timeline-tech">
+                                    <span>Azure</span>
+                                    <span>Docker</span>
+                                    <span>Kubernetes</span>
+                                    <span>OpenText ECM</span>
+                                </div>
+                                <div class="expand-indicator">
+                                    <i class="fas fa-plus-circle"></i> Click to expand
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item scroll-reveal" data-experience="varcons">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date-banner">Jan 2023 - Apr 2023</div>
+                            <div class="timeline-body">
+                                <h3>Web Developer Intern</h3>
+                                <h4>Varcons Technology</h4>
+                                <p>Developed responsive food-ordering platform reducing order processing time by 20%. 
+                                   Integrated MySQL databases and revamped UI/UX for enhanced engagement.</p>
+                                <div class="timeline-tech">
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>JavaScript</span>
+                                    <span>MySQL</span>
+                                </div>
+                                <div class="expand-indicator">
+                                    <i class="fas fa-plus-circle"></i> Click to expand
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item scroll-reveal" data-experience="mycaptain">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date-banner">Apr 2020 - May 2020</div>
+                            <div class="timeline-body">
+                                <h3>Business Development Intern</h3>
+                                <h4>My Captain</h4>
+                                <p>Facilitated virtual workshops with 50+ participants, achieving 20% increase in enrollment. 
+                                   Collaborated on marketing strategies using Agile methodologies.</p>
+                                <div class="timeline-tech">
+                                    <span>Marketing</span>
+                                    <span>Agile</span>
+                                    <span>MS Office</span>
+                                </div>
+                                <div class="expand-indicator">
+                                    <i class="fas fa-plus-circle"></i> Click to expand
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Technical Arsenal</h2>
+
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category scroll-reveal">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="python">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                        <div class="skill-item" data-skill="swift">
+                            <i class="fab fa-swift"></i>
+                            <span>Swift</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item" data-skill="html">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML/CSS</span>
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                        <div class="skill-item" data-skill="javascript">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                            <div class="skill-level" data-level="50"></div>
+                        </div>
+                        <div class="skill-item" data-skill="java">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item" data-skill="sql">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Tools -->
+                <div class="skill-category scroll-reveal">
+                    <h3 class="category-title">Frameworks & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="swiftui">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>SwiftUI</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item" data-skill="flutter">
+                            <i class="fas fa-mobile"></i>
+                            <span>Flutter</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item" data-skill="react">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                            <div class="skill-level" data-level="50"></div>
+                        </div>
+                        <div class="skill-item" data-skill="angular">
+                            <i class="fab fa-angular"></i>
+                            <span>Angular</span>
+                            <div class="skill-level" data-level="50"></div>
+                        </div>
+                        <div class="skill-item" data-skill="docker">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                            <div class="skill-level" data-level="75"></div>
+                        </div>
+                        <div class="skill-item" data-skill="kubernetes">
+                            <i class="fas fa-dharmachakra"></i>
+                            <span>Kubernetes</span>
+                            <div class="skill-level" data-level="75"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & Databases -->
+                <div class="skill-category scroll-reveal">
+                    <h3 class="category-title">Cloud & Databases</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="aws">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="azure">
+                            <i class="fab fa-microsoft"></i>
+                            <span>Azure</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item" data-skill="firebase">
+                            <i class="fas fa-fire"></i>
+                            <span>Firebase</span>
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                        <div class="skill-item" data-skill="mysql">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                        <div class="skill-item" data-skill="mongodb">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                            <div class="skill-level" data-level="70"></div>
+                        </div>
+                        <div class="skill-item" data-skill="gitlab">
+                            <i class="fab fa-gitlab"></i>
+                            <span>GitLab</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications scroll-reveal">
+                <h3 class="category-title">Certifications</h3>
+                <div class="cert-badges">
+                    <div class="cert-badge">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS Cloud Practitioner (CLF-C02)</span>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fab fa-microsoft"></i>
+                        <span>Azure Fundamentals (AZ-900)</span>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fab fa-microsoft"></i>
+                        <span>MS Office Specialist</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">About Me</h2>
+            <div class="about-content">
+                <div class="about-image scroll-reveal-left">
+                    <img src="images/keerthi-profile.jpg" alt="Keerthi Anil" onerror="this.src='https://via.placeholder.com/400x400/1a1a1a/e50914?text=Keerthi+Anil'">
+                </div>
+                <div class="about-text scroll-reveal-right">
+                    <h3>Hello, I'm Keerthi!</h3>
+                    <p>
+                        I'm a passionate software developer and cloud enthusiast who believes in building meaningful 
+                        solutions that make a real difference. Currently pursuing my Master's at Northeastern University, 
+                        I'm on a journey to blend technology with creativity.
+                    </p>
+                    <p>
+                        My path in tech has been anything but conventional. From streamlining enterprise workflows at 
+                        Capgemini to diving deep into iOS development with SwiftUI, I'm constantly exploring new ways 
+                        to solve problems. But what drives me isn't just the code- it's the impact it creates.
+                    </p>
+                    <p>
+                        My journey from Bangalore to Boston has taught me that technology knows no boundaries. As I continue to grow at NEU, I'm excited about the possibilities ahead- from AI-powered mobile apps to cloud solutions that scale globally. Ready to create something amazing together? Let's make life a bit easier, one line of code at a time.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>MS Information Systems @ Northeastern (2026)</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Boston, MA</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>anil.ke@northeastern.edu</span>
+                        </div>
+                    </div>
+
+                    <div class="leadership-highlights">
+                        <h4>Leadership & Achievements</h4>
+                        <div class="achievement-grid">
+                            <div class="achievement-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <strong>Club Head</strong>
+                                    <span>Association of Computer Engineers</span>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <div>
+                                    <strong>Event Coordinator</strong>
+                                    <span>HackerEarth Club</span>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-globe"></i>
+                                <div>
+                                    <strong>MUN Delegate</strong>
+                                    <span>CMRIT Model United Nations</span>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-leaf"></i>
+                                <div>
+                                    <strong>Volunteer</strong>
+                                    <span>Environmental Campaign</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/keerthiareddy" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/keerthianil" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:anil.ke@northeastern.edu" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section class="interests-section" id="interests">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Beyond the Code</h2>
+            <p class="section-subtitle scroll-reveal">My non-technical README</p>
+
+            <div class="interests-grid">
+                <div class="interest-card scroll-reveal">
+                    <div class="interest-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Creative Writing</h3>
+                    <p>Writing is my therapy. Happy? I write. Sad? I write more. My notes app is basically a graveyard of terrible first drafts and occasionally decent poetry.</p>
+                </div>
+
+                <div class="interest-card scroll-reveal">
+                    <div class="interest-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Reading</h3>
+                    <p>That person who brings three books for a weekend trip "just in case". My Goodreads <i>currently reading</i> list is embarrassingly long.</p>
+                </div>
+
+                <div class="interest-card scroll-reveal">
+                    <div class="interest-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Cinema</h3>
+                    <p>Self-proclaimed movie nerd who made this entire portfolio Netflix-themed (you noticed, right?). Interstellar's docking scene is my Roman Empire. My weekend plans usually involve new releases or explaining the MCU timeline to unwilling listeners.</p>
+                </div>
+
+                <div class="interest-card scroll-reveal">
+                    <div class="interest-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Sketching</h3>
+                    <p>Started with crayons, graduated to charcoal when time permits (rarely). Childhood passion that's become a luxury in adult life, but the itch to draw never really goes away.</p>
+                </div>
+
+                <div class="interest-card scroll-reveal">
+                    <div class="interest-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>Travelling</h3>
+                    <p>Wanderlust hits different when you're solo. There's something about figuring out foreign cities alone, making spontaneous friends over coffee, and saying yes to adventures you'd normally overthink- it's all about the authentic experiences that make the best stories.</p>
+                </div>
+
+                <div class="interest-card scroll-reveal">
+                    <div class="interest-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Wellness & Fitness</h3>
+                    <p>Fitness journey powered by black coffee and questionable playlist choices. This whole wellness journey hits different. Firm advocate of <i>earn your pizza</i> but also <i>pizza is always earned</i>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title scroll-reveal">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-cta scroll-reveal">
+                    <h3>Ready to work together?</h3>
+                    <p>I'm always interested in hearing about new opportunities and exciting projects.</p>
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email Me</h3>
+                            <p>Drop me a line anytime</p>
+                            <a href="mailto:anil.ke@northeastern.edu" class="contact-link">Send Email</a>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                            <p>Currently based in</p>
+                            <span class="contact-link">Boston, MA</span>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fab fa-linkedin"></i>
+                            <h3>Connect on LinkedIn</h3>
+                            <p>Let's grow our network</p>
+                            <a href="https://www.linkedin.com/in/keerthiareddy" target="_blank" class="contact-link">View Profile</a>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fab fa-github"></i>
+                            <h3>GitHub</h3>
+                            <p>Check out my repositories</p>
+                            <a href="https://github.com/keerthianil" target="_blank" class="contact-link">View Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Keerthi Anil. Built with passion and code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience Modal -->
+    <div class="modal" id="experienceModal">
+        <div class="modal-content">
+            <button class="modal-close" id="experienceModalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="experienceModalBody">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
