@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function() {
             • Accessibility compliant`,
             tech: ['HTML5', 'CSS3', 'JavaScript', 'AWS'],
             links: {
-                github: 'https://github.com/keerthianil/NetflixPortfolio'
+                github: 'https://github.com/keerthianil/portfolio'
             },
             impact: '90+ Lighthouse score, 2s load time, hosted on AWS'
         }
@@ -383,17 +383,18 @@ document.addEventListener('DOMContentLoaded', function() {
             company: 'Capgemini',
             duration: 'Jun 2023 - Aug 2024',
             location: 'Bengaluru, India',
-            description: `As a Cloud Analyst at Capgemini, I worked on enterprise-level cloud infrastructure and optimization projects.`,
+            description: `As a Cloud Analyst at Capgemini, I worked on enterprise-level cloud infrastructure migration and optimization projects.`,
             responsibilities: [
-                'Streamlined client project workflows by implementing Microsoft Azure services (Azure Active Directory, Blob Storage, Kubernetes Service, and Functions), resulting in a 15% increase in operational efficiency',
-                'Architected containerized solutions using Docker to standardize development pipelines, reducing deployment errors',
-                'Optimized enterprise content management workflows by leveraging OpenText ECM, improving document retrieval efficiency and ensuring regulatory compliance'
+                'Migrated 15+ web applications to AWS cloud infrastructure using EC2, S3, and RDS, reducing infrastructure costs by 30% and improving application performance',
+                'Built and maintained infrastructure as code using Terraform and CloudFormation, managing 50+ AWS resources across development, staging, and production environments',
+                'Monitored application performance using CloudWatch dashboards and set up automated alerts for resource utilization, helping identify and resolve issues before they impacted end users',
+                'Supported containerization efforts by creating Docker images and deploying applications on Amazon ECS, working closely with senior engineers to implement CI/CD pipelines using GitLab'
             ],
-            technologies: ['Microsoft Azure', 'Docker', 'Kubernetes', 'OpenText ECM'],
+            technologies: ['AWS', 'EC2', 'S3', 'RDS', 'Docker', 'Terraform', 'CloudFormation', 'GitLab CI/CD'],
             achievements: [
-                '15% increase in operational efficiency',
-                'Reduced deployment errors through containerization',
-                'Improved document retrieval efficiency'
+                '30% reduction in infrastructure costs',
+                'Managed 50+ AWS resources across multiple environments',
+                'Improved application performance and monitoring'
             ]
         },
         'varcons': {
@@ -421,13 +422,13 @@ document.addEventListener('DOMContentLoaded', function() {
             location: 'Bengaluru, India',
             description: `At My Captain, I gained experience in business development and marketing while helping grow online learning programs.`,
             responsibilities: [
-                'Facilitated virtual workshops and interactive sessions with 50+ participants, achieving a 20% increase in enrollment rates for online learning programs',
+                'Facilitated virtual workshops and interactive sessions with 50+ participants, achieving a 30% increase in enrollment rates for online learning programs',
                 'Collaborated with cross-functional teams using Agile methodologies to design targeted marketing strategies, driving brand awareness and lead generation',
                 'Led a group of colleagues, ensuring seamless communication and timely project completion using MS Office tools (Excel, PowerPoint)'
             ],
             technologies: ['MS Office', 'Agile Methodologies'],
             achievements: [
-                '20% increase in enrollment rates',
+                '30% increase in enrollment rates',
                 'Successfully facilitated workshops with 50+ participants',
                 'Led team initiatives for project completion'
             ]
