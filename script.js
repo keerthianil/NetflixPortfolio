@@ -280,22 +280,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const experienceModalBody = document.getElementById('experienceModalBody');
     const experienceModalClose = document.getElementById('experienceModalClose');
 
-    // Project Data - Updated order and content
+    // Project Data - Updated to match resume
     const projectData = {
         'swaptitude': {
-            title: 'Swaptitude - iOS Skill Exchange App',
+            title: 'Swaptitude - iOS Skill Exchange Platform',
             description: 'A comprehensive skill-exchange iOS application that connects users based on complementary skills and learning preferences.',
             longDescription: `Swaptitude is an innovative iOS application designed to facilitate skill exchange between users. Built as part of my Smartphone-based Web Development course at Northeastern University, it features:
             
-            • Real-time messaging with Firestore integration
-            • Custom matching algorithm based on skills and preferences
-            • Video integration for virtual skill-sharing sessions
-            • EventKit calendar synchronization for scheduling
-            • Push notifications for engagement
-            • Built-in conversational AI assistant
-            • MVVM architecture with Combine framework
-            • Responsive UI with light/dark theme support`,
-            tech: ['SwiftUI', 'Firebase', 'Firestore', 'MVVM', 'Combine', 'EventKit', 'Push Notifications'],
+            • Developed native iOS application using SwiftUI and MVVM architecture, implementing user authentication with Firebase Auth supporting email and password sign-in
+            • Built real-time messaging feature with Firestore database, enabling instant chat functionality with offline support and push notifications
+            • Engineered skill-matching algorithm to connect users based on complementary expertise, utilizing Firebase Cloud Functions for backend logic`,
+            tech: ['SwiftUI', 'Firebase', 'Combine', 'Core Data'],
             links: {
                 github: 'https://github.com/keerthianil/swaptitude'
             },
@@ -323,51 +318,65 @@ document.addEventListener('DOMContentLoaded', function() {
         'accident-detection': {
             title: 'AI-Powered Accident Detection System',
             description: 'Real-time accident detection using CNN and automated emergency response.',
-            longDescription: `An innovative system developed as my final year project at CMRIT that uses computer vision and deep learning to detect accidents in real-time and automatically alert emergency services. Features:
+            longDescription: `An innovative system developed as my final year project at CMRIT that uses computer vision and deep learning to detect accidents in real-time and automatically alert emergency services:
             
-            • Convolutional Neural Network for image analysis
-            • Real-time processing of traffic camera feeds
-            • Automated emergency service alerts
-            • Cloud storage for rapid data access
-            • GPS location tracking
-            • Severity assessment algorithm
-            • Historical data analysis for accident hotspots`,
-            tech: ['Python', 'TensorFlow', 'CNN', 'OpenCV', 'Cloud Storage', 'Machine Learning'],
+            • Trained CNN model using TensorFlow on dataset of 5,000+ traffic images, achieving 91% accuracy in detecting vehicle accidents from surveillance footage
+            • Implemented real-time video processing pipeline with OpenCV, capable of analyzing 15 frames per second and detecting accidents within seconds of occurrence
+            • Integrated AWS S3 for cloud storage with intelligent lifecycle policies, reducing storage costs while maintaining sub-second retrieval times for critical incidents`,
+            tech: ['Python', 'TensorFlow', 'OpenCV', 'AWS S3'],
             links: {
                 github: 'https://github.com/keerthianil/accident-detection'
             },
-            impact: '30% faster emergency response time in test scenarios'
+            impact: '91% accuracy in accident detection with sub-second response time'
+        },
+        'face-mouse': {
+            title: 'Face Embedded Mouse Interface',
+            description: 'Hands-free computer control system for physically handicapped users.',
+            longDescription: `Selected for Smart India Hackathon 2021, this project provides a hands-free computer interface for users with physical disabilities. Features include:
+            
+            • Developed hands-free computer control system using Python and facial recognition
+            • Designed for users with amelia and amputation conditions
+            • Implemented facial gesture detection algorithms
+            • Enabled cursor control through nose movements and eye blinks
+            • Integrated voice assistant functionality for enhanced accessibility
+            • Collaborated with team of 5 to document technical specifications
+            • Tested software with target user requirements`,
+            tech: ['Python', 'OpenCV', 'Facial Recognition', 'Computer Vision', 'AI'],
+            links: {
+                github: 'https://github.com/keerthianil/face-mouse'
+            },
+            impact: 'Selected for Smart India Hackathon 2021, enabling computer access for physically handicapped users'
         },
         'food-ordering': {
             title: 'Food Ordering Platform',
-            description: 'Fully responsive food ordering system with real-time order tracking.',
-            longDescription: `A modern food ordering platform developed during my internship at Varcons Technology, designed to streamline the restaurant ordering process. Features include:
+            description: 'Fully responsive food ordering system with optimized performance.',
+            longDescription: `A modern food ordering platform developed during my internship at Varcons Technology. Built with:
             
-            • Responsive design for all devices
-            • Real-time order status tracking
-            • Integrated payment gateway
-            • Restaurant dashboard
-            • Customer reviews and ratings
-            • Order history and favorites
-            • Location-based restaurant search`,
-            tech: ['HTML5', 'CSS3', 'JavaScript', 'MySQL', 'PHP'],
+            • Responsive design using HTML5/CSS3 with mobile-first approach
+            • Implemented CSS Grid and Flexbox layouts for 100+ test users
+            • Developed MySQL database schema with normalized tables
+            • Improved data integrity and query performance by 40%
+            • Collaborated with backend developers on RESTful API architecture
+            • Contributed to frontend optimization reducing page load times by 30%
+            • Enhanced UI/UX driving increased customer engagement`,
+            tech: ['HTML5', 'CSS3', 'JavaScript', 'MySQL', 'RESTful APIs'],
             links: {
                 github: 'https://github.com/keerthianil/food-ordering'
             },
-            impact: '20% reduction in order processing time'
+            impact: '30% reduction in page load times and 40% improvement in query performance'
         },
         'portfolio': {
             title: 'Netflix-Style Portfolio Website',
             description: 'This interactive portfolio website inspired by Netflix\'s UI/UX.',
             longDescription: `A unique portfolio website that reimagines the traditional developer portfolio through the lens of Netflix's acclaimed user interface. Features:
             
-            • Netflix-inspired card-based layout
-            • Smooth animations and transitions
-            • Interactive project showcases
-            • Responsive design
-            • Performance optimized
-            • SEO friendly
-            • Accessibility compliant`,
+            • Netflix-inspired card-based layout with smooth animations
+            • Fully responsive design for all devices
+            • Interactive project showcases with modal popups
+            • Performance optimized with lazy loading
+            • SEO friendly with proper meta tags
+            • Accessibility compliant following WCAG guidelines
+            • Clean code architecture with modular CSS and JavaScript`,
             tech: ['HTML5', 'CSS3', 'JavaScript', 'AWS'],
             links: {
                 github: 'https://github.com/keerthianil/portfolio'
@@ -376,7 +385,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Experience Data - Strictly from resume
+    // Experience Data - Updated to match resume exactly
     const experienceData = {
         'capgemini': {
             title: 'Cloud Analyst',
@@ -385,16 +394,16 @@ document.addEventListener('DOMContentLoaded', function() {
             location: 'Bengaluru, India',
             description: `As a Cloud Analyst at Capgemini, I worked on enterprise-level cloud infrastructure migration and optimization projects.`,
             responsibilities: [
-                'Migrated 15+ web applications to AWS cloud infrastructure using EC2, S3, and RDS, reducing infrastructure costs by 30% and improving application performance',
-                'Built and maintained infrastructure as code using Terraform and CloudFormation, managing 50+ AWS resources across development, staging, and production environments',
-                'Monitored application performance using CloudWatch dashboards and set up automated alerts for resource utilization, helping identify and resolve issues before they impacted end users',
-                'Supported containerization efforts by creating Docker images and deploying applications on Amazon ECS, working closely with senior engineers to implement CI/CD pipelines using GitLab'
+                'Supported migration of 10+ enterprise applications to AWS cloud, implementing EC2 instances with auto-scaling groups and S3 lifecycle policies, contributing to 30% reduction in monthly infrastructure costs',
+                'Created 15+ reusable Terraform modules for AWS resources including VPCs, security groups, and RDS instances, reducing deployment time from 4 hours to 30 minutes',
+                'Configured CloudWatch dashboards with custom metrics and alarms for 5+ production applications, enabling proactive monitoring and minimizing downtime incidents',
+                'Containerized applications using Docker best practices and deployed on Amazon ECS, implementing blue-green deployments for zero-downtime releases'
             ],
-            technologies: ['AWS', 'EC2', 'S3', 'RDS', 'Docker', 'Terraform', 'CloudFormation', 'GitLab CI/CD'],
+            technologies: ['AWS', 'EC2', 'S3', 'RDS', 'Lambda', 'CloudWatch', 'IAM', 'ECS', 'Docker', 'Terraform', 'GitLab CI/CD'],
             achievements: [
-                '30% reduction in infrastructure costs',
-                'Managed 50+ AWS resources across multiple environments',
-                'Improved application performance and monitoring'
+                '30% reduction in monthly infrastructure costs',
+                'Reduced deployment time from 4 hours to 30 minutes',
+                'Zero-downtime releases with blue-green deployments'
             ]
         },
         'varcons': {
@@ -404,33 +413,32 @@ document.addEventListener('DOMContentLoaded', function() {
             location: 'Bengaluru, India',
             description: `During my internship at Varcons Technology, I contributed to developing a comprehensive food ordering platform.`,
             responsibilities: [
-                'Designed and developed a fully responsive food-ordering platform using HTML, CSS, and JavaScript, reducing customer order processing time by 20%',
-                'Integrated MySQL databases to streamline order management and ensure quick access to customer data, enhancing operational efficiency',
-                'Revamped UI/UX through collaborative team efforts, driving an increase in customer engagement and retention'
+                'Built responsive food-ordering website prototype using HTML5/CSS3 with mobile-first design, implementing CSS Grid and Flexbox layouts for 100+ test users',
+                'Developed MySQL database schema with normalized tables for orders, customers, and restaurants, improving data integrity and query performance by 40%',
+                'Collaborated with backend developers to understand RESTful API architecture and data flow, contributing to frontend optimization that reduced page load times by 30%'
             ],
-            technologies: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
+            technologies: ['HTML5', 'CSS3', 'JavaScript', 'MySQL', 'RESTful APIs'],
             achievements: [
-                '20% reduction in order processing time',
-                'Enhanced operational efficiency',
-                'Increased customer engagement and retention'
+                '30% reduction in page load times',
+                '40% improvement in query performance',
+                'Successfully tested with 100+ users'
             ]
         },
-        'mycaptain': {
-            title: 'Business Development Intern',
-            company: 'My Captain',
-            duration: 'Apr 2020 - May 2020',
+        'research-assistant': {
+            title: 'Research Assistant - Accessibility Technology',
+            company: 'CMR Institute of Technology',
+            duration: 'Aug 2021 - Dec 2021',
             location: 'Bengaluru, India',
-            description: `At My Captain, I gained experience in business development and marketing while helping grow online learning programs.`,
+            description: `Contributed to innovative accessibility technology research focusing on hands-free computer control for physically handicapped users.`,
             responsibilities: [
-                'Facilitated virtual workshops and interactive sessions with 50+ participants, achieving a 30% increase in enrollment rates for online learning programs',
-                'Collaborated with cross-functional teams using Agile methodologies to design targeted marketing strategies, driving brand awareness and lead generation',
-                'Led a group of colleagues, ensuring seamless communication and timely project completion using MS Office tools (Excel, PowerPoint)'
+                'Contributed to Face Embedded Mouse interface project selected for Smart India Hackathon 2021, developing hands-free computer control system for physically handicapped users using Python and facial recognition',
+                'Assisted in implementing facial gesture detection algorithms and voice assistant integration, enabling cursor control through nose movements and eye blinks for users with amelia and amputation',
+                'Collaborated with team of 5 to document technical specifications and test software with target user requirements'
             ],
-            technologies: ['MS Office', 'Agile Methodologies'],
+            technologies: ['Python', 'OpenCV', 'Facial Recognition', 'Computer Vision', 'AI'],
             achievements: [
-                '30% increase in enrollment rates',
-                'Successfully facilitated workshops with 50+ participants',
-                'Led team initiatives for project completion'
+                'Project selected for Smart India Hackathon 2021',
+                'Enabled computer access for physically handicapped users'
             ]
         }
     };
