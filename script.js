@@ -1,6 +1,6 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
-    // Loading Screen - Hide it after a short delay
+    // Loading Screen
     const loadingScreen = document.getElementById('loadingScreen');
     if (loadingScreen) {
         setTimeout(() => {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Trigger initial animations after loading screen is hidden
                 initializeAnimations();
             }, 500);
-        }, 1500); // Reduced from 2000ms
+        }, 1500);
     } else {
         // If no loading screen, initialize immediately
         initializeAnimations();
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Re-query project cards after DOM is loaded
     function initializeProjectSlider() {
         projectCards = document.querySelectorAll('.project-card');
-        console.log('Total projects found:', projectCards.length); // Debug log - should show 5
+        console.log('Total projects found:', projectCards.length);
         updateButtonVisibility();
     }
 
@@ -280,167 +280,191 @@ document.addEventListener('DOMContentLoaded', function() {
     const experienceModalBody = document.getElementById('experienceModalBody');
     const experienceModalClose = document.getElementById('experienceModalClose');
 
-    // Project Data - Updated to match resume
+    // Project Data 
     const projectData = {
+        'cloud-native': {
+            title: 'Cloud-Native Web Application',
+            description: 'Enterprise-grade RESTful API with comprehensive testing and CI/CD pipeline.',
+            longDescription: `A production-ready cloud-native web application built with modern DevOps practices and scalable architecture:
+            
+            • Developed stateless RESTful API with Node.js/Express implementing user and product management with Basic Authentication, BCrypt password hashing, and comprehensive CRUD operations following OpenAPI specifications
+            • Engineered 74 integration tests using Jest/Supertest achieving 78% code coverage, validating authentication flows, data integrity, edge cases, and concurrent operations with less than 3 second response times
+            • Built CI/CD pipeline using GitHub Actions with PostgreSQL service containers, automating test execution on pull requests and enforcing branch protection rules ensuring code quality before merge
+            • Designed cloud-native architecture with stateless design, environment-based configuration, health check endpoints for orchestration, and database abstraction with Sequelize ORM`,
+            tech: ['Node.js', 'Express.js', 'PostgreSQL', 'Jest', 'Supertest', 'GitHub Actions', 'Sequelize ORM', 'BCrypt', 'OpenAPI'],
+            links: {
+                github: 'https://github.com/keerthianil/webapp'
+            },
+            impact: '78% test coverage, sub-3 second response times, fully automated CI/CD pipeline'
+        },
         'swaptitude': {
             title: 'Swaptitude - iOS Skill Exchange Platform',
-            description: 'A comprehensive skill-exchange iOS application that connects users based on complementary skills and learning preferences.',
-            longDescription: `Swaptitude is an innovative iOS application designed to facilitate skill exchange between users. Built as part of my Smartphone-based Web Development course at Northeastern University, it features:
+            description: 'A comprehensive skill-exchange iOS application with real-time messaging.',
+            longDescription: `Innovative iOS application designed to connect users based on complementary skills and facilitate knowledge exchange:
             
             • Developed native iOS application using SwiftUI and MVVM architecture, implementing user authentication with Firebase Auth supporting email and password sign-in
             • Built real-time messaging feature with Firestore database, enabling instant chat functionality with offline support and push notifications
-            • Engineered skill-matching algorithm to connect users based on complementary expertise, utilizing Firebase Cloud Functions for backend logic`,
-            tech: ['SwiftUI', 'Firebase', 'Combine', 'Core Data'],
+            • Engineered skill-matching algorithm to connect users based on complementary expertise, utilizing Firebase Cloud Functions for backend logic
+            • Designed user profile system with skill portfolios, ratings, and review functionality, implementing data validation and content moderation for maintaining platform quality`,
+            tech: ['SwiftUI', 'Firebase', 'Firestore', 'MVVM', 'Push Notifications', 'Cloud Functions', 'iOS'],
             links: {
-                github: 'https://github.com/keerthianil/swaptitude'
+                github: 'https://github.com/keerthianil/Swaptitude'
             },
-            impact: 'Successfully built a feature-rich iOS app demonstrating advanced SwiftUI capabilities and real-time data synchronization'
+            impact: 'Real-time messaging with offline support, intelligent skill-matching algorithm'
         },
         'travelplanner': {
             title: 'TravelPlanner - iOS Travel Organization App',
-            description: 'A comprehensive travel organization app that helps users plan, organize, and enjoy their trips with modern iOS development practices.',
-            longDescription: `TravelPlanner is a feature-rich iOS application designed to simplify travel planning and organization. Built with Swift UIKit and modern iOS development practices, it provides an intuitive interface for managing all aspects of travel planning:
+            description: 'Comprehensive travel planning iOS app with Core Data persistence.',
+            longDescription: `Feature-rich iOS application designed to simplify travel planning and organization:
             
-            • Trip Creation & Management: Create, edit, and organize multiple trips
-            • Itinerary Builder: Create detailed day-by-day schedules
-            • Smart Packing Lists: Categorized lists with completion tracking
-            • Budget Tracker: Record and categorize travel expenses
-            • Smart Reminders: Never miss important travel events
-            • Offline Support: Access your plans even without internet
-            • Maps Integration: MapKit and CoreLocation for navigation
-            • Media Management: AVFoundation for camera and photos`,
-            tech: ['Swift', 'UIKit', 'MVVM', 'Core Data', 'MapKit', 'CoreLocation', 'Firebase Auth', 'URLSession'],
+            • Built a responsive travel planning iOS application using SwiftUI that enables users to discover destinations, create custom itineraries, and manage trip budgets with an intuitive mobile-first interface
+            • Implemented Core Data for persistent storage of trips and itineraries, and developed a smart budget tracking system with expense categorization and real-time calculations
+            • Designed features including destination search with filtering, day-by-day itinerary planning with activity management, photo integration for trip memories, and comprehensive trip statistics dashboard
+            • Integrated MapKit for location services and navigation, ensuring seamless travel experience even offline`,
+            tech: ['SwiftUI', 'Core Data', 'MapKit', 'CoreLocation', 'iOS', 'MVVM', 'Swift'],
             links: {
                 github: 'https://github.com/keerthianil/TravelPlanner'
             },
-            impact: 'Created an intuitive travel companion app that works seamlessly across all network conditions with smart data management'
+            impact: 'Offline-first design with Core Data, comprehensive budget tracking system'
         },
         'accident-detection': {
             title: 'AI-Powered Accident Detection System',
-            description: 'Real-time accident detection using CNN and automated emergency response.',
-            longDescription: `An innovative system developed as my final year project at CMRIT that uses computer vision and deep learning to detect accidents in real-time and automatically alert emergency services:
+            description: 'Real-time accident detection using CNN with automated emergency response.',
+            longDescription: `Final year project implementing computer vision and deep learning for real-time accident detection:
             
             • Trained CNN model using TensorFlow on dataset of 5,000+ traffic images, achieving 91% accuracy in detecting vehicle accidents from surveillance footage
             • Implemented real-time video processing pipeline with OpenCV, capable of analyzing 15 frames per second and detecting accidents within seconds of occurrence
-            • Integrated AWS S3 for cloud storage with intelligent lifecycle policies, reducing storage costs while maintaining sub-second retrieval times for critical incidents`,
-            tech: ['Python', 'TensorFlow', 'OpenCV', 'AWS S3'],
-            links: {
-                github: 'https://github.com/keerthianil/accident-detection'
-            },
-            impact: '91% accuracy in accident detection with sub-second response time'
-        },
-        'face-mouse': {
-            title: 'Face Embedded Mouse Interface',
-            description: 'Hands-free computer control system for physically handicapped users.',
-            longDescription: `Selected for Smart India Hackathon 2021, this project provides a hands-free computer interface for users with physical disabilities. Features include:
-            
-            • Developed hands-free computer control system using Python and facial recognition
-            • Designed for users with amelia and amputation conditions
-            • Implemented facial gesture detection algorithms
-            • Enabled cursor control through nose movements and eye blinks
-            • Integrated voice assistant functionality for enhanced accessibility
-            • Collaborated with team of 5 to document technical specifications
-            • Tested software with target user requirements`,
-            tech: ['Python', 'OpenCV', 'Facial Recognition', 'Computer Vision', 'AI'],
-            links: {
-                github: 'https://github.com/keerthianil/face-mouse'
-            },
-            impact: 'Selected for Smart India Hackathon 2021, enabling computer access for physically handicapped users'
+            • Integrated AWS S3 for cloud storage with intelligent lifecycle policies, reducing storage costs while maintaining sub-second retrieval times for critical incidents
+            • Designed automated alert system for emergency services with location tracking and incident severity assessment`,
+            tech: ['Python', 'TensorFlow', 'OpenCV', 'CNN', 'AWS S3', 'Computer Vision', 'Deep Learning'],
+            impact: '91% accuracy in accident detection with sub-second response time for emergency alerts'
         },
         'food-ordering': {
             title: 'Food Ordering Platform',
-            description: 'Fully responsive food ordering system with optimized performance.',
-            longDescription: `A modern food ordering platform developed during my internship at Varcons Technology. Built with:
+            description: 'Fully responsive food ordering system with optimized database performance.',
+            longDescription: `Modern food ordering platform developed during internship at Varcons Technology:
             
-            • Responsive design using HTML5/CSS3 with mobile-first approach
-            • Implemented CSS Grid and Flexbox layouts for 100+ test users
-            • Developed MySQL database schema with normalized tables
-            • Improved data integrity and query performance by 40%
-            • Collaborated with backend developers on RESTful API architecture
-            • Contributed to frontend optimization reducing page load times by 30%
-            • Enhanced UI/UX driving increased customer engagement`,
-            tech: ['HTML5', 'CSS3', 'JavaScript', 'MySQL', 'RESTful APIs'],
+            • Built responsive food-ordering website prototype using HTML5/CSS3 with mobile-first design, implementing CSS Grid and Flexbox layouts for 100+ test users
+            • Developed MySQL database schema with normalized tables for orders, customers, and restaurants, improving data integrity and query performance by 35%
+            • Collaborated with backend developers to understand RESTful API architecture and data flow, contributing to frontend optimization that reduced page load times by 30%
+            • Implemented real-time order tracking features and interactive UI components using vanilla JavaScript`,
+            tech: ['HTML5', 'CSS3', 'JavaScript', 'MySQL', 'RESTful APIs', 'Flexbox', 'CSS Grid'],
             links: {
-                github: 'https://github.com/keerthianil/food-ordering'
+                github: 'https://github.com/keerthianil/CafeOrderingSystem'
             },
-            impact: '30% reduction in page load times and 40% improvement in query performance'
+            impact: '30% reduction in page load times, 35% improvement in query performance'
         },
         'portfolio': {
             title: 'Netflix-Style Portfolio Website',
             description: 'This interactive portfolio website inspired by Netflix\'s UI/UX.',
-            longDescription: `A unique portfolio website that reimagines the traditional developer portfolio through the lens of Netflix's acclaimed user interface. Features:
+            longDescription: `A unique portfolio website that reimagines the traditional developer portfolio through Netflix's interface:
             
-            • Netflix-inspired card-based layout with smooth animations
-            • Fully responsive design for all devices
-            • Interactive project showcases with modal popups
-            • Performance optimized with lazy loading
-            • SEO friendly with proper meta tags
+            • Netflix-inspired card-based layout with smooth animations and transitions
+            • Fully responsive design optimized for all devices from mobile to 4K displays
+            • Interactive project showcases with detailed modal popups
+            • Performance optimized with lazy loading and efficient asset management
+            • SEO friendly with proper meta tags and semantic HTML
             • Accessibility compliant following WCAG guidelines
-            • Clean code architecture with modular CSS and JavaScript`,
-            tech: ['HTML5', 'CSS3', 'JavaScript', 'AWS'],
+            • Clean code architecture with modular CSS and vanilla JavaScript`,
+            tech: ['HTML5', 'CSS3', 'JavaScript', 'GitHub Pages', 'Responsive Design'],
             links: {
-                github: 'https://github.com/keerthianil/portfolio'
+                github: 'https://github.com/keerthianil/NetflixPortfolio'
             },
-            impact: '90+ Lighthouse score, 2s load time, hosted on AWS'
+            impact: '90+ Lighthouse score, 2s load time, fully responsive across all devices'
         }
     };
 
-    // Experience Data - Updated to match resume exactly
+    // Updated Experience Data
     const experienceData = {
+        'ra': {
+            title: 'Research Assistant - iOS Developer',
+            company: 'Northeastern University',
+            duration: 'Sep 2025 - Present',
+            location: 'Portland, Maine (Remote)',
+            description: `Assisting iOS/visionOS development for cutting-edge accessibility research projects focused on improving mobile experiences for blind and low-vision users.`,
+            responsibilities: [
+                'Design accessibility-focused iOS/visionOS applications for blind and low-vision users, implementing multimodal feedback systems',
+                'Implement advanced haptics, audio feedback, and VoiceOver integration using AVFoundation and Core Haptics APIs',
+                'Collaborate with interdisciplinary research teams to enhance inclusive mobile interaction patterns',
+                'Conduct user testing sessions with visually impaired participants to gather feedback and iterate on designs',
+                'Develop prototypes for innovative gesture-based and voice-controlled interfaces'
+            ],
+            technologies: ['iOS', 'visionOS', 'Swift', 'SwiftUI', 'AVFoundation', 'Core Haptics', 'VoiceOver', 'Accessibility APIs']
+        },
+        'ta': {
+            title: 'Teaching Assistant',
+            company: 'Northeastern University',
+            duration: 'Sep 2025 - Present',
+            location: 'Boston, MA',
+            description: `As a Teaching Assistant for iOS Development courses, I guide students through the intricacies of mobile app development using Swift and SwiftUI.`,
+            responsibilities: [
+                'Lead lab sessions and office hours for iOS development graduate students, helping them master Swift and SwiftUI fundamentals',
+                'Mentor student teams through complex iOS projects, providing code reviews and debugging assistance',
+                'Evaluate assignments with detailed, actionable feedback to improve understanding',
+                'Guide debugging sessions covering iOS frameworks including Core Data, Combine, and testing with XCTest',
+                'Create supplementary learning materials and code examples for challenging concepts'
+            ],
+            technologies: ['Swift', 'SwiftUI', 'Core Data', 'Combine', 'XCTest', 'iOS', 'Xcode']
+        },
         'capgemini': {
             title: 'Cloud Analyst',
             company: 'Capgemini',
             duration: 'Jun 2023 - Aug 2024',
             location: 'Bengaluru, India',
-            description: `As a Cloud Analyst at Capgemini, I worked on enterprise-level cloud infrastructure migration and optimization projects.`,
+            description: `As a Cloud Analyst at Capgemini, I played a crucial role in enterprise cloud transformation initiatives, focusing on AWS infrastructure optimization and automation.`,
             responsibilities: [
-                'Supported migration of 10+ enterprise applications to AWS cloud, implementing EC2 instances with auto-scaling groups and S3 lifecycle policies, contributing to 30% reduction in monthly infrastructure costs',
-                'Created 15+ reusable Terraform modules for AWS resources including VPCs, security groups, and RDS instances, reducing deployment time from 4 hours to 30 minutes',
-                'Configured CloudWatch dashboards with custom metrics and alarms for 5+ production applications, enabling proactive monitoring and minimizing downtime incidents',
-                'Containerized applications using Docker best practices and deployed on Amazon ECS, implementing blue-green deployments for zero-downtime releases'
+                'Supported migration of 10+ enterprise applications to AWS cloud, implementing EC2 instances with auto-scaling groups and S3 lifecycle policies to optimize infrastructure costs by 30%',
+                'Created reusable Terraform modules for AWS resources including VPCs, security groups, and RDS instances, reducing deployment time from hours to minutes',
+                'Configured CloudWatch dashboards with custom metrics and alarms for production applications, enabling proactive monitoring and minimizing downtime incidents',
+                'Containerized applications using Docker and deployed on Amazon ECS, implementing blue-green deployments for zero-downtime releases',
+                'Collaborated with development teams to design RESTful APIs and microservices architecture for business-critical applications'
             ],
-            technologies: ['AWS', 'EC2', 'S3', 'RDS', 'Lambda', 'CloudWatch', 'IAM', 'ECS', 'Docker', 'Terraform', 'GitLab CI/CD'],
-            achievements: [
-                '30% reduction in monthly infrastructure costs',
-                'Reduced deployment time from 4 hours to 30 minutes',
-                'Zero-downtime releases with blue-green deployments'
-            ]
+            technologies: ['AWS', 'EC2', 'S3', 'RDS', 'Lambda', 'CloudWatch', 'IAM', 'ECS', 'Docker', 'Terraform', 'GitLab CI/CD']
         },
         'varcons': {
             title: 'Web Developer Intern',
-            company: 'Varcons Technology Pvt Ltd',
+            company: 'Varcons Technology',
             duration: 'Jan 2023 - Apr 2023',
             location: 'Bengaluru, India',
-            description: `During my internship at Varcons Technology, I contributed to developing a comprehensive food ordering platform.`,
+            description: `During my internship at Varcons Technology, I contributed to developing a comprehensive food ordering platform with focus on performance optimization.`,
             responsibilities: [
-                'Built responsive food-ordering website prototype using HTML5/CSS3 with mobile-first design, implementing CSS Grid and Flexbox layouts for 100+ test users',
-                'Developed MySQL database schema with normalized tables for orders, customers, and restaurants, improving data integrity and query performance by 40%',
-                'Collaborated with backend developers to understand RESTful API architecture and data flow, contributing to frontend optimization that reduced page load times by 30%'
+                'Built responsive food-ordering website prototype using HTML5/CSS3 with mobile-first design, implementing CSS Grid and Flexbox layouts',
+                'Developed MySQL database schema with normalized tables, improving data integrity and query performance by 35%',
+                'Collaborated with backend developers to understand RESTful API architecture and data flow',
+                'Contributing to frontend optimization that reduced page load times by 30%',
+                'Implemented real-time order tracking features and interactive UI components using vanilla JavaScript'
             ],
-            technologies: ['HTML5', 'CSS3', 'JavaScript', 'MySQL', 'RESTful APIs'],
-            achievements: [
-                '30% reduction in page load times',
-                '40% improvement in query performance',
-                'Successfully tested with 100+ users'
-            ]
+            technologies: ['HTML5', 'CSS3', 'JavaScript', 'MySQL', 'RESTful APIs', 'Git', 'Responsive Design']
         },
-        'research-assistant': {
+        'cmr-research': {
             title: 'Research Assistant - Accessibility Technology',
             company: 'CMR Institute of Technology',
             duration: 'Aug 2021 - Dec 2021',
             location: 'Bengaluru, India',
             description: `Contributed to innovative accessibility technology research focusing on hands-free computer control for physically handicapped users.`,
             responsibilities: [
-                'Contributed to Face Embedded Mouse interface project selected for Smart India Hackathon 2021, developing hands-free computer control system for physically handicapped users using Python and facial recognition',
-                'Assisted in implementing facial gesture detection algorithms and voice assistant integration, enabling cursor control through nose movements and eye blinks for users with amelia and amputation',
+                'Contributed to Face Embedded Mouse interface project selected for Smart India Hackathon 2021',
+                'Developed hands-free computer control system for physically handicapped users using Python and facial recognition',
+                'Assisted in implementing facial gesture detection algorithms and voice assistant integration',
+                'Enabled cursor control through nose movements and eye blinks for users with amelia and amputation',
                 'Collaborated with team of 5 to document technical specifications and test software with target user requirements'
             ],
-            technologies: ['Python', 'OpenCV', 'Facial Recognition', 'Computer Vision', 'AI'],
-            achievements: [
-                'Project selected for Smart India Hackathon 2021',
-                'Enabled computer access for physically handicapped users'
-            ]
-        }
+            technologies: ['Python', 'OpenCV', 'Facial Recognition', 'Computer Vision', 'AI', 'Accessibility']
+        },
+        'ace-club': {
+            title: 'Club Head',
+            company: 'ACE Club (Association of Computer Engineers), CMRIT',
+            duration: 'Oct 2021 - Dec 2022',
+            location: 'Bengaluru, Karnataka, India',
+            description: `As Club Head of ACE (Association of Computer Engineers), I led the Computer Science department's premier technical club for over a year, driving initiatives that enhanced the technical and professional development of 200+ students.`,
+            responsibilities: [
+                'Led a team to organize technical workshops, hackathons, and industry expert sessions',
+                'Organized events including coding competitions, tech talks, and career development workshops reaching 100+ students',
+                'Increased club membership by 40% through strategic outreach and engaging technical content',
+                'Mentored junior members in event management, public speaking, and technical skills development'
+            ],
+            technologies: ['Team Leadership', 'Event Planning', 'Event Management', 'Public Speaking', 'Strategic Planning', 'Community Building']
+    }
     };
 
     // Modal Trigger Event Listeners for Projects
@@ -494,7 +518,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <div class="modal-links">
                     ${project.links.github ? `<a href="${project.links.github}" target="_blank" class="btn btn-primary"><i class="fab fa-github"></i> View Code</a>` : ''}
-                    ${project.links.paper ? `<a href="${project.links.paper}" target="_blank" class="btn btn-secondary"><i class="fas fa-file-pdf"></i> Research Paper</a>` : ''}
+                    ${project.links.demo ? `<a href="${project.links.demo}" target="_blank" class="btn btn-secondary"><i class="fas fa-external-link-alt"></i> Live Demo</a>` : ''}
                 </div>
             </div>
         `;
@@ -528,13 +552,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="modal-tech">
                         ${experience.technologies.map(tech => `<span class="tech-badge">${tech}</span>`).join('')}
                     </div>
-                </div>
-                
-                <div class="modal-section">
-                    <h3>Key Achievements</h3>
-                    <ul class="modal-achievements">
-                        ${experience.achievements.map(achievement => `<li><i class="fas fa-trophy"></i> ${achievement}</li>`).join('')}
-                    </ul>
                 </div>
             </div>
         `;
@@ -610,21 +627,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', scrollReveal);
 
-    // Parallax Effect
-    const parallaxElements = document.querySelectorAll('.parallax-container');
-    
-    if (parallaxElements.length > 0) {
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            
-            parallaxElements.forEach(element => {
-                const speed = element.dataset.speed || 0.5;
-                const yPos = -(scrolled * speed);
-                element.style.transform = `translateY(${yPos}px)`;
-            });
-        });
-    }
-
     // Skill Animation
     const animateSkills = () => {
         const skillItems = document.querySelectorAll('.skill-item');
@@ -681,7 +683,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Add hover effect to cards
-    document.querySelectorAll('.project-card, .experience-card').forEach(card => {
+    document.querySelectorAll('.project-card, .timeline-item, .skill-category, .interest-card').forEach(card => {
         card.addEventListener('mouseenter', () => {
             card.style.zIndex = '10';
         });

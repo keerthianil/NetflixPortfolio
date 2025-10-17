@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Keerthi Anil - Software Engineer & Cloud Analyst Portfolio">
-    <meta name="keywords" content="Keerthi Anil, Full Stack Developer, Cloud Analyst, iOS Developer, Web Developer, Software Engineer, Portfolio, Northeastern University">
+    <meta name="description" content="Keerthi Anil - Software Engineer | Mobile Development | DevOps">
+    <meta name="keywords" content="Keerthi Anil, Software Engineer, iOS Developer, AWS, DevOps, Mobile Development">
     <meta name="author" content="Keerthi Anil">
     <title>Keerthi Anil - Netflix Style Portfolio</title>
     
@@ -55,19 +55,27 @@
         </div>
         <div class="hero-content">
             <h1 class="hero-title animate-fade-up">KEERTHI ANIL</h1>
-            <p class="hero-subtitle animate-fade-up delay-1">Software Engineer | Cloud Analyst | Mobile App Developer</p>
+            <p class="hero-subtitle animate-fade-up delay-1">Software Engineer | Mobile Development | DevOps</p>
             <p class="hero-description animate-fade-up delay-2">
-                Building apps within apps within clouds
+                Making smartphones smarter, clouds lighter, and technology more human - one commit at a time
             </p>
             <div class="hero-buttons animate-fade-up delay-3">
                 <a href="#projects" class="btn btn-primary">
                     <i class="fas fa-play"></i>
                     View Projects
                 </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-envelope"></i>
-                    Get In Touch
+                <a href="https://github.com/keerthianil" class="btn btn-secondary" target="_blank">
+                    <i class="fab fa-github"></i>
+                    GitHub Profile
                 </a>
+            </div>
+            <div class="hero-stats animate-fade-up delay-4">
+                <div class="stat-item">
+                    <div class="stat-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span class="stat-number">F-1 Grad Student authorized to work in USA</span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -75,38 +83,41 @@
         </div>
     </section>
 
-    <!-- Featured Project with Parallax -->
+    <!-- Featured Project Section -->
     <section class="featured-section" id="featured">
         <div class="container">
             <h2 class="section-title scroll-reveal">Featured Project</h2>
             <div class="featured-project">
                 <div class="featured-content scroll-reveal-left">
-                    <span class="featured-tag">NEW</span>
-                    <h3 class="featured-title">Swaptitude</h3>
+                    <span class="featured-tag">FEATURED</span>
+                    <h3 class="featured-title">Swaptitude - iOS Skill Exchange Platform</h3>
                     <p class="featured-description">
-                        Developed native iOS application using SwiftUI and MVVM architecture, implementing user authentication with Firebase Auth 
-                        supporting email and password sign-in. Built real-time messaging feature with Firestore database, enabling instant chat 
-                        functionality with offline support and push notifications.
+                        A comprehensive skill-exchange iOS application that connects users based on complementary skills. 
+                        Features real-time messaging with offline support, skill-matching algorithms, user authentication 
+                        via Firebase, and a robust rating system. Built with SwiftUI and MVVM architecture, demonstrating 
+                        modern iOS development practices with push notifications and cloud functions.
                     </p>
                     <div class="featured-tech">
                         <span class="tech-badge">SwiftUI</span>
                         <span class="tech-badge">Firebase</span>
-                        <span class="tech-badge">Combine</span>
-                        <span class="tech-badge">Core Data</span>
+                        <span class="tech-badge">Firestore</span>
+                        <span class="tech-badge">MVVM</span>
+                        <span class="tech-badge">Cloud Functions</span>
+                        <span class="tech-badge">Push Notifications</span>
                     </div>
                     <div class="featured-buttons">
                         <button class="btn btn-primary modal-trigger" data-project="swaptitude">
                             <i class="fas fa-info-circle"></i>
                             More Info
                         </button>
-                        <a href="https://github.com/keerthianil" class="btn btn-secondary">
+                        <a href="https://github.com/keerthianil/swaptitude" class="btn btn-secondary" target="_blank">
                             <i class="fab fa-github"></i>
                             View Code
                         </a>
                     </div>
                 </div>
                 <div class="featured-image scroll-reveal-right">
-                    <img src="images/swaptitude-featured.png" alt="Swaptitude App Featured" onerror="this.src='https://via.placeholder.com/600x400/1a1a1a/e50914?text=Swaptitude+Featured'">
+                    <img src="images/swaptitude-featured.png" alt="Swaptitude Featured" onerror="this.src='https://via.placeholder.com/600x400/1a1a1a/e50914?text=Swaptitude'">
                 </div>
             </div>
         </div>
@@ -116,6 +127,7 @@
     <section class="projects-section" id="projects">
         <div class="container">
             <h2 class="section-title scroll-reveal">My Projects</h2>
+            <p class="section-subtitle scroll-reveal">Academic & Personal Projects</p>
             
             <!-- Projects Slider -->
             <div class="project-slider">
@@ -123,19 +135,39 @@
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <div class="project-cards">
+                    <!-- Cloud-Native Web Application -->
+                    <div class="project-card modal-trigger scroll-reveal" data-project="cloud-native">
+                        <div class="card-category">Cloud & Backend</div>
+                        <div class="card-image">
+                            <img src="images/cloud-native-card.png" alt="Cloud Native App" onerror="this.src='https://via.placeholder.com/300x170/1a1a1a/e50914?text=Cloud+Native'">
+                        </div>
+                        <div class="card-content">
+                            <h4>Cloud-Native Web App</h4>
+                            <p>RESTful API with 78% test coverage</p>
+                            <div class="card-tech">
+                                <span>Node.js</span>
+                                <span>PostgreSQL</span>
+                                <span>Jest</span>
+                            </div>
+                            <div class="card-hover-text">
+                                <i class="fas fa-mouse-pointer"></i> Click for details
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Swaptitude - Mobile -->
                     <div class="project-card modal-trigger scroll-reveal" data-project="swaptitude">
-                        <div class="card-category">Mobile Development</div>
+                        <div class="card-category">iOS Development</div>
                         <div class="card-image">
                             <img src="images/swaptitude-card.png" alt="Swaptitude Mobile" onerror="this.src='https://via.placeholder.com/300x170/1a1a1a/e50914?text=Swaptitude'">
                         </div>
                         <div class="card-content">
                             <h4>Swaptitude iOS</h4>
-                            <p>Skill-exchange iOS application</p>
+                            <p>Skill-exchange platform with real-time chat</p>
                             <div class="card-tech">
                                 <span>SwiftUI</span>
                                 <span>Firebase</span>
-                                <span>iOS</span>
+                                <span>MVVM</span>
                             </div>
                             <div class="card-hover-text">
                                 <i class="fas fa-mouse-pointer"></i> Click for details
@@ -145,13 +177,13 @@
 
                     <!-- TravelPlanner - Mobile -->
                     <div class="project-card modal-trigger scroll-reveal" data-project="travelplanner">
-                        <div class="card-category">Mobile Development</div>
+                        <div class="card-category">iOS Development</div>
                         <div class="card-image">
                             <img src="images/travelplanner-card.png" alt="TravelPlanner App" onerror="this.src='https://via.placeholder.com/300x170/1a1a1a/e50914?text=TravelPlanner'">
                         </div>
                         <div class="card-content">
                             <h4>TravelPlanner iOS</h4>
-                            <p>Travel planning & organization app</p>
+                            <p>Travel planning with Core Data</p>
                             <div class="card-tech">
                                 <span>SwiftUI</span>
                                 <span>Core Data</span>
@@ -163,18 +195,18 @@
                         </div>
                     </div>
 
-                    <!-- Accident Detection - Cloud -->
+                    <!-- AI-Powered Accident Detection -->
                     <div class="project-card modal-trigger scroll-reveal" data-project="accident-detection">
-                        <div class="card-category">Cloud & AI</div>
+                        <div class="card-category">Machine Learning</div>
                         <div class="card-image">
                             <img src="images/accident-detection-card.png" alt="Accident Detection" onerror="this.src='https://via.placeholder.com/300x170/1a1a1a/e50914?text=Accident+Detection'">
                         </div>
                         <div class="card-content">
                             <h4>Accident Detection System</h4>
-                            <p>AI-powered emergency response</p>
+                            <p>91% accuracy with CNN & real-time alerts</p>
                             <div class="card-tech">
-                                <span>Python</span>
                                 <span>TensorFlow</span>
+                                <span>OpenCV</span>
                                 <span>AWS S3</span>
                             </div>
                             <div class="card-hover-text">
@@ -191,11 +223,11 @@
                         </div>
                         <div class="card-content">
                             <h4>Food Ordering Platform</h4>
-                            <p>Responsive food ordering system</p>
+                            <p>Responsive design with optimized queries</p>
                             <div class="card-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>MySQL</span>
                             </div>
                             <div class="card-hover-text">
                                 <i class="fas fa-mouse-pointer"></i> Click for details
@@ -230,7 +262,7 @@
         </div>
     </section>
 
-    <!-- Experience Timeline with Apple-like Reveal -->
+    <!-- Experience Timeline -->
     <section class="experience-section" id="experience">
         <div class="container">
             <h2 class="section-title scroll-reveal">Professional Journey</h2>
@@ -238,6 +270,53 @@
             
             <div class="timeline-wrapper">
                 <div class="timeline">
+                    <!-- Research Assistant NEU - FIRST -->
+                    <div class="timeline-item scroll-reveal" data-experience="ra">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date-banner">Sep 2025 - Present</div>
+                            <div class="timeline-body">
+                                <h3>Research Assistant - iOS Developer</h3>
+                                <h4>Northeastern University</h4>
+                                <p>Design and develop innovative iOS/visionOS applications for research projects, 
+                                   focusing on accessibility features for blind and low-vision users.</p>
+                                <div class="timeline-tech">
+                                    <span>iOS</span>
+                                    <span>visionOS</span>
+                                    <span>Swift</span>
+                                    <span>Accessibility</span>
+                                </div>
+                                <div class="expand-indicator">
+                                    <i class="fas fa-plus-circle"></i> Click to expand
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teaching Assistant - SECOND -->
+                    <div class="timeline-item scroll-reveal" data-experience="ta">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date-banner">Sep 2025 - Present</div>
+                            <div class="timeline-body">
+                                <h3>Teaching Assistant</h3>
+                                <h4>Northeastern University</h4>
+                                <p>Assist students in developing iOS applications using Swift and SwiftUI, conducting 
+                                   lab sessions covering iOS frameworks including Core Data, Combine, and XCTest.</p>
+                                <div class="timeline-tech">
+                                    <span>Swift</span>
+                                    <span>SwiftUI</span>
+                                    <span>Core Data</span>
+                                    <span>XCTest</span>
+                                </div>
+                                <div class="expand-indicator">
+                                    <i class="fas fa-plus-circle"></i> Click to expand
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Analyst -->
                     <div class="timeline-item scroll-reveal" data-experience="capgemini">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
@@ -245,13 +324,13 @@
                             <div class="timeline-body">
                                 <h3>Cloud Analyst</h3>
                                 <h4>Capgemini</h4>
-                                <p>Supported migration of 10+ enterprise applications to AWS cloud, achieving 30% reduction in infrastructure costs. 
-                                   Created reusable Terraform modules and configured CloudWatch monitoring dashboards.</p>
+                                <p>Supported migration of enterprise applications to AWS cloud, implementing EC2 instances 
+                                   with auto-scaling groups and S3 lifecycle policies to optimize infrastructure costs.</p>
                                 <div class="timeline-tech">
                                     <span>AWS</span>
                                     <span>Docker</span>
                                     <span>Terraform</span>
-                                    <span>CloudWatch</span>
+                                    <span>ECS</span>
                                 </div>
                                 <div class="expand-indicator">
                                     <i class="fas fa-plus-circle"></i> Click to expand
@@ -260,6 +339,7 @@
                         </div>
                     </div>
 
+                    <!-- Web Developer Intern -->
                     <div class="timeline-item scroll-reveal" data-experience="varcons">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
@@ -267,13 +347,13 @@
                             <div class="timeline-body">
                                 <h3>Web Developer Intern</h3>
                                 <h4>Varcons Technology</h4>
-                                <p>Built responsive food-ordering website prototype reducing page load times by 30%. 
-                                   Developed MySQL database schema improving query performance by 40%.</p>
+                                <p>Built responsive food-ordering website prototype using HTML5/CSS3 with mobile-first design, 
+                                   improving data integrity and query performance.</p>
                                 <div class="timeline-tech">
-                                    <span>HTML</span>
-                                    <span>CSS</span>
-                                    <span>JavaScript</span>
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
                                     <span>MySQL</span>
+                                    <span>Flexbox</span>
                                 </div>
                                 <div class="expand-indicator">
                                     <i class="fas fa-plus-circle"></i> Click to expand
@@ -282,20 +362,42 @@
                         </div>
                     </div>
 
-                    <div class="timeline-item scroll-reveal" data-experience="research-assistant">
+                    <!-- Research Assistant CMR -->
+                    <div class="timeline-item scroll-reveal" data-experience="cmr-research">
                         <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="timeline-date-banner">Aug 2021 - Dec 2021</div>
                             <div class="timeline-body">
                                 <h3>Research Assistant - Accessibility Technology</h3>
                                 <h4>CMR Institute of Technology</h4>
-                                <p>Contributed to Face Embedded Mouse interface project for Smart India Hackathon 2021, developing hands-free 
-                                   computer control system for physically handicapped users using Python and facial recognition.</p>
+                                <p>Contributed to Face Embedded Mouse interface project selected for Smart India Hackathon 2021, 
+                                   developing hands-free computer control system for physically handicapped users.</p>
                                 <div class="timeline-tech">
                                     <span>Python</span>
                                     <span>OpenCV</span>
+                                    <span>Computer Vision</span>
                                     <span>AI</span>
-                                    <span>Facial Recognition</span>
+                                </div>
+                                <div class="expand-indicator">
+                                    <i class="fas fa-plus-circle"></i> Click to expand
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item scroll-reveal" data-experience="ace-club">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date-banner">Oct 2021 - Dec 2022</div>
+                            <div class="timeline-body">
+                                <h3>Club Head</h3>
+                                <h4>ACE Club (Association of Computer Engineers), CMRIT</h4>
+                                <p>Led the Computer Science department's premier technical club, organizing events, 
+                                workshops, and fostering a community of aspiring engineers.</p>
+                                <div class="timeline-tech">
+                                    <span>Team Leadership</span>
+                                    <span>Event Planning</span>
+                                    <span>Event Management</span>
                                 </div>
                                 <div class="expand-indicator">
                                     <i class="fas fa-plus-circle"></i> Click to expand
@@ -308,138 +410,213 @@
         </div>
     </section>
 
-    <!-- Skills Section with Enhanced Layout -->
+    <!-- Skills Section -->
     <section class="skills-section" id="skills">
         <div class="container">
             <h2 class="section-title scroll-reveal">Technical Arsenal</h2>
 
-            <!-- Main Skills Categories -->
-            <div class="skills-main-grid">
-                <!-- Cloud & DevOps Card -->
-                <div class="skill-card-enhanced scroll-reveal">
-                    <div class="skill-card-header">
-                        <i class="fas fa-cloud"></i>
-                        <h3>Cloud & DevOps</h3>
-                    </div>
-                    <div class="skill-card-body">
-                        <div class="skill-group">
-                            <h4>AWS Services</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">EC2</span>
-                                <span class="skill-tag">S3</span>
-                                <span class="skill-tag">RDS</span>
-                                <span class="skill-tag">Lambda</span>
-                                <span class="skill-tag">CloudWatch</span>
-                                <span class="skill-tag">IAM</span>
-                                <span class="skill-tag">ECS</span>
-                            </div>
+            <div class="skills-grid">
+                <!-- Cloud Platforms -->
+                <div class="skill-category scroll-reveal">
+                    <h3 class="category-title">Cloud Platforms</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="aws">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS (EC2, S3, RDS, Lambda, CloudWatch, IAM, ECS, CloudFormation, CloudFront)</span>
+                            <div class="skill-level" data-level="90"></div>
                         </div>
-                        <div class="skill-group">
-                            <h4>DevOps Tools</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">Terraform</span>
-                                <span class="skill-tag">Infrastructure as Code</span>
-                                <span class="skill-tag">GitLab CI/CD</span>
-                            </div>
+                        <div class="skill-item" data-skill="gcp">
+                            <i class="fas fa-cloud"></i>
+                            <span>Google Cloud Platform</span>
+                            <div class="skill-level" data-level="75"></div>
+                        </div>
+                        <div class="skill-item" data-skill="firebase">
+                            <i class="fas fa-fire"></i>
+                            <span>Firebase</span>
+                            <div class="skill-level" data-level="95"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Languages & Databases Card -->
-                <div class="skill-card-enhanced scroll-reveal">
-                    <div class="skill-card-header">
-                        <i class="fas fa-code"></i>
-                        <h3>Languages & Databases</h3>
-                    </div>
-                    <div class="skill-card-body">
-                        <div class="skill-group">
-                            <h4>Programming</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">Java</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">SQL</span>
-                            </div>
+                <!-- Infrastructure as Code & DevOps -->
+                <div class="skill-category scroll-reveal">
+                    <h3 class="category-title">Infrastructure as Code & DevOps</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="terraform">
+                            <i class="fas fa-cube"></i>
+                            <span>Terraform</span>
+                            <div class="skill-level" data-level="85"></div>
                         </div>
-                        <div class="skill-group">
-                            <h4>Databases</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">Firebase</span>
-                            </div>
+                        <div class="skill-item" data-skill="docker">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                            <div class="skill-level" data-level="85"></div>
                         </div>
-                        <div class="skill-group">
-                            <h4>APIs</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">RESTful APIs</span>
-                            </div>
+                        <div class="skill-item" data-skill="kubernetes">
+                            <i class="fas fa-dharmachakra"></i>
+                            <span>Kubernetes</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item" data-skill="cloudformation">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS CloudFormation</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item" data-skill="githubactions">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Actions</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="gitlab">
+                            <i class="fab fa-gitlab"></i>
+                            <span>GitLab CI/CD</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="jenkins">
+                            <i class="fas fa-infinity"></i>
+                            <span>Jenkins</span>
+                            <div class="skill-level" data-level="75"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Tools & Platforms Card -->
-                <div class="skill-card-enhanced scroll-reveal full-width">
-                    <div class="skill-card-header">
-                        <i class="fas fa-tools"></i>
-                        <h3>Tools & Platforms</h3>
+                <!-- Backend & Mobile Development -->
+                <div class="skill-category scroll-reveal">
+                    <h3 class="category-title">Backend & Mobile Development</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="python">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                        <div class="skill-item" data-skill="java">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="nodejs">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="express">
+                            <i class="fab fa-node"></i>
+                            <span>Express.js</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="swift">
+                            <i class="fab fa-swift"></i>
+                            <span>Swift</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                        <div class="skill-item" data-skill="swiftui">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>SwiftUI</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                        <div class="skill-item" data-skill="restapi">
+                            <i class="fas fa-plug"></i>
+                            <span>RESTful APIs</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                        <div class="skill-item" data-skill="microservices">
+                            <i class="fas fa-cubes"></i>
+                            <span>Microservices</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item" data-skill="sequelize">
+                            <i class="fas fa-database"></i>
+                            <span>Sequelize ORM</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
                     </div>
-                    <div class="skill-card-body horizontal-layout">
-                        <div class="skill-group">
-                            <h4>Development</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Git</span>
-                                <span class="skill-tag">VS Code</span>
-                                <span class="skill-tag">Postman</span>
-                                <span class="skill-tag">Swift/SwiftUI</span>
-                                <span class="skill-tag">XCode</span>
-                            </div>
+                </div>
+
+                <!-- Databases & Tools -->
+                <div class="skill-category scroll-reveal">
+                    <h3 class="category-title">Databases & Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="postgresql">
+                            <i class="fas fa-database"></i>
+                            <span>PostgreSQL</span>
+                            <div class="skill-level" data-level="90"></div>
                         </div>
-                        <div class="skill-group">
-                            <h4>Project Management</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Jira</span>
-                                <span class="skill-tag">Agile/Scrum</span>
-                            </div>
+                        <div class="skill-item" data-skill="mysql">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                            <div class="skill-level" data-level="90"></div>
                         </div>
-                        <div class="skill-group">
-                            <h4>Operating Systems</h4>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Linux</span>
-                            </div>
+                        <div class="skill-item" data-skill="mongodb">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item" data-skill="dynamodb">
+                            <i class="fab fa-aws"></i>
+                            <span>DynamoDB</span>
+                            <div class="skill-level" data-level="80"></div>
+                        </div>
+                        <div class="skill-item" data-skill="git">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                            <div class="skill-level" data-level="95"></div>
+                        </div>
+                        <div class="skill-item" data-skill="postman">
+                            <i class="fas fa-rocket"></i>
+                            <span>Postman</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                        <div class="skill-item" data-skill="jira">
+                            <i class="fab fa-jira"></i>
+                            <span>Jira</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="linux">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="bash">
+                            <i class="fas fa-terminal"></i>
+                            <span>Bash</span>
+                            <div class="skill-level" data-level="85"></div>
+                        </div>
+                        <div class="skill-item" data-skill="xcode">
+                            <i class="fab fa-apple"></i>
+                            <span>XCode</span>
+                            <div class="skill-level" data-level="90"></div>
+                        </div>
+                        <div class="skill-item" data-skill="xctest">
+                            <i class="fas fa-vial"></i>
+                            <span>XCTest</span>
+                            <div class="skill-level" data-level="85"></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Certifications -->
-            <div class="certifications-enhanced scroll-reveal">
-                <h3 class="section-subtitle">Professional Certifications</h3>
-                <div class="cert-cards">
-                    <div class="cert-card">
-                        <div class="cert-icon">
-                            <i class="fab fa-aws"></i>
-                        </div>
-                        <div class="cert-content">
-                            <h4>AWS Certified Cloud Practitioner</h4>
-                            <p>Amazon Web Services</p>
-                        </div>
+            <div class="certifications scroll-reveal">
+                <h3 class="category-title">Certifications</h3>
+                <div class="cert-badges">
+                    <div class="cert-badge">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS Certified Cloud Practitioner</span>
                     </div>
-                    <div class="cert-card">
-                        <div class="cert-icon">
-                            <i class="fab fa-microsoft"></i>
-                        </div>
-                        <div class="cert-content">
-                            <h4>Microsoft Azure Fundamentals</h4>
-                            <p>Microsoft</p>
-                        </div>
+                    <div class="cert-badge">
+                        <i class="fab fa-microsoft"></i>
+                        <span>Microsoft Azure Fundamentals</span>
+                    </div>
+                    <div class="cert-badge">
+                        <i class="fab fa-microsoft"></i>
+                        <span>MS Office</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-   <!-- About Section -->
+    <!-- About Section -->
     <section class="about-section" id="about">
         <div class="container">
             <h2 class="section-title scroll-reveal">About Me</h2>
@@ -450,26 +627,22 @@
                 <div class="about-text scroll-reveal-right">
                     <h3>Hello, I'm Keerthi!</h3>
                     <p>
-                        I'm a passionate software developer and cloud enthusiast who believes in building meaningful 
-                        solutions that make a real difference. Currently pursuing my Master's at Northeastern University, 
-                        I'm on a journey to blend technology with creativity.
+                        I'm that engineer who gets genuinely excited about both elegant code and its real-world impact. Currently pursuing my Master's at Northeastern, I wear multiple hats as a Teaching Assistant and Research Assistant— because why choose between mentoring future iOS developers and building accessible technology when you can do both?
                     </p>
                     <p>
-                        My path in tech has been anything but conventional. From streamlining enterprise workflows at 
-                        Capgemini to diving deep into iOS development with SwiftUI, I'm constantly exploring new ways 
-                        to solve problems. But what drives me isn't just the code- it's the impact it creates.
+                        My journey started at Capgemini, where I discovered that migrating 10+ enterprise applications to AWS wasn't just about the cloud—it was about transforming how businesses operate (and yes, saving on infrastructure costs makes everyone happy). From crafting cloud-native APIs to building iOS apps, I've learned that the best solutions are the ones users don't have to think about—they just work.
                     </p>
                     <p>
-                        My journey from Bangalore to Boston has taught me that technology knows no boundaries. As I continue to grow at NEU, I'm excited about the possibilities ahead- from AI-powered mobile apps to cloud solutions that scale globally. Ready to create something amazing together? Let's make life a bit easier, one line of code at a time.
+                        What sets me apart? I see the bigger picture in every line of code. When I implement Terraform modules, I'm thinking about the developers who'll use them six months from now. When I build an iOS feature, I'm obsessing over that split-second where frustration turns into delight. My expertise spans the full stack—AWS, Docker, Swift, CI/CD pipelines—but my real skill is knowing when to use each tool to create something that just works."
                     </p>
                     <div class="about-info">
                         <div class="info-item">
                             <i class="fas fa-graduation-cap"></i>
-                            <span>MS Information Systems @ Northeastern (2026)</span>
+                            <span>MS Information Systems @ Northeastern (GPA: 3.7)</span>
                         </div>
                         <div class="info-item">
-                            <i class="fas fa-book"></i>
-                            <span>Relevant Courses: Cloud Computing, Application Engineering, Web Design & UX, Smartphone Development</span>
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Teaching Assistant & Research Assistant @ NEU</span>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
@@ -481,39 +654,6 @@
                         </div>
                     </div>
 
-                    <div class="leadership-highlights">
-                        <h4>Leadership & Achievements</h4>
-                        <div class="achievement-grid">
-                            <div class="achievement-item">
-                                <i class="fas fa-users"></i>
-                                <div>
-                                    <strong>Club Head</strong>
-                                    <span>Association of Computer Engineers</span>
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-calendar-check"></i>
-                                <div>
-                                    <strong>Event Coordinator</strong>
-                                    <span>HackerEarth Club</span>
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-globe"></i>
-                                <div>
-                                    <strong>MUN Delegate</strong>
-                                    <span>CMRIT Model United Nations</span>
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <i class="fas fa-leaf"></i>
-                                <div>
-                                    <strong>Volunteer Coordinator</strong>
-                                    <span>Environmental Campaign</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="social-links">
                         <a href="https://www.linkedin.com/in/keerthiareddy" target="_blank" class="social-link">
                             <i class="fab fa-linkedin"></i>
@@ -550,7 +690,7 @@
                         <i class="fas fa-book-open"></i>
                     </div>
                     <h3>Reading</h3>
-                    <p>That person who brings three books for a weekend trip "just in case". My Goodreads <i>currently reading</i> list is embarrassingly long.</p>
+                    <p>That person who brings three books for a weekend trip "just in case". My Goodreads currently reading list is embarrassingly long.</p>
                 </div>
 
                 <div class="interest-card scroll-reveal">
@@ -558,7 +698,7 @@
                         <i class="fas fa-film"></i>
                     </div>
                     <h3>Cinema</h3>
-                    <p>Self-proclaimed movie nerd who made this entire portfolio Netflix-themed (you noticed, right?). Interstellar's docking scene is my Roman Empire. My weekend plans usually involve new releases or explaining the MCU timeline to unwilling listeners.</p>
+                    <p>Self-proclaimed movie nerd who made this entire portfolio Netflix-themed (you noticed, right?). Interstellar's docking scene is my Roman Empire.</p>
                 </div>
 
                 <div class="interest-card scroll-reveal">
@@ -566,7 +706,7 @@
                         <i class="fas fa-pencil-ruler"></i>
                     </div>
                     <h3>Sketching</h3>
-                    <p>Started with crayons, graduated to charcoal when time permits (rarely). Childhood passion that's become a luxury in adult life, but the itch to draw never really goes away.</p>
+                    <p>Started with crayons, graduated to charcoal when time permits (rarely). Childhood passion that's become a luxury in adult life.</p>
                 </div>
 
                 <div class="interest-card scroll-reveal">
@@ -574,7 +714,7 @@
                         <i class="fas fa-globe-americas"></i>
                     </div>
                     <h3>Travelling</h3>
-                    <p>Wanderlust hits different when you're solo. There's something about figuring out foreign cities alone, making spontaneous friends over coffee, and saying yes to adventures you'd normally overthink- it's all about the authentic experiences that make the best stories.</p>
+                    <p>Wanderlust hits different when you're solo. Making spontaneous friends over coffee and saying yes to adventures you'd normally overthink.</p>
                 </div>
 
                 <div class="interest-card scroll-reveal">
@@ -582,12 +722,12 @@
                         <i class="fas fa-heartbeat"></i>
                     </div>
                     <h3>Wellness & Fitness</h3>
-                    <p>Fitness journey powered by black coffee and questionable playlist choices. This whole wellness journey hits different. Firm advocate of <i>earn your pizza</i> but also <i>pizza is always earned</i>.</p>
+                    <p>Fitness journey powered by black coffee and questionable playlist choices. Firm advocate of "earn your pizza" but also "pizza is always earned".</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Contact Section -->
     <section class="contact-section" id="contact">
         <div class="container">
